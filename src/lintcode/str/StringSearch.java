@@ -37,6 +37,20 @@ public class StringSearch {
 
     public static void main(String[] args){
       int temp =  strString("abadcddfrefad","ba");
-        System.out.println(temp);
+//        System.out.println(temp);
+
+        System.out.println(NumberOf1(-1));
+    }
+
+    public static int NumberOf1(int n) {
+        int count = 0;
+        while (n != 0) {
+            if (n % 2 != 0) {
+                count++;
+            }
+             n =  n & (n-1);
+//            n = n / 2;
+        }
+        return count;
     }
 }
